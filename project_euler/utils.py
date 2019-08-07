@@ -3,6 +3,7 @@ def sieve(floor):
     implementation of prime sieve algo
     return a list of primes under a floor number
     """
+    floor = int(floor)
     dumb_list = [i for i in range(floor)]
     limit = int(floor ** 0.5) + 1
     for i in range(2, limit):
