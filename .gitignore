@@ -9,6 +9,10 @@ __pycache__/
 # vscode
 .vscode/
 
+# R
+*.Rproj
+
+
 # Distribution / packaging
 .Python
 build/
