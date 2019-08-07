@@ -1,0 +1,22 @@
+flip_data = runif(100000, 0, 1)
+
+flip = {1:100000}
+
+porpotion ={}
+
+head = 0
+
+for (order_flip in 1:100000) {
+	if (flip_data[order_flip] < 0.03) {
+		head = (head * (order_flip - 1) + 1)/order_flip
+		porpotion = c(porpotion, head)
+	} else {
+		head = (head * (order_flip - 1) + 0)/order_flip
+		porpotion = c(porpotion, head)
+	}
+}
+
+porpotion_df = data.frame(flip, porpotion)
+
+porpotion_plot = gvisLineChart(porpotion_df)
+plot(porpotion_plot)
