@@ -2,7 +2,7 @@ import time
 import os
 
 problem = input("Please input the number of the problem: ")
-running_text
-start = time.time()
+running_text = "python p{}.py".format(problem)
+start_time = time.time()
 os.system(running_text)
-print()
+print("--- %s seconds ---" % (time.time() - start_time))
